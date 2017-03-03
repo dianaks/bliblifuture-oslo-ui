@@ -3,11 +3,6 @@ import ReactDOM from 'react-dom';
 
 //import table from './stockopname-table.js';
 
-var Header =
-		<h1>Stockopname</h1>;
-var UpdateButton =
-	<button>Perbaharui Data</button>;
-
 var BreadChrumb = 
 	<ol className="breadcrumb">
 	  <li className="breadcrumb-item"><a href="#">Home</a></li>
@@ -16,43 +11,64 @@ var BreadChrumb =
 	</ol>;
 
 var DropdownProfile = 
-	<div className="dropdown">
-	  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	    Dropdown button
+	<div className="btn-group">
+	  <button type="button" className="btn btn-default">hadisetiawan</button>
+	  <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    <span className="caret"></span>
+	    <span className="sr-only">Toggle Dropdown</span>
 	  </button>
-	  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-	    <a className="dropdown-item" href="#">hadisetiawan</a>
-	    <a className="dropdown-item" href="#">ganti gudang</a>
-	    <a className="dropdown-item" href="#">keluar</a>
-	  </div>
+	  <ul className="dropdown-menu">
+	    <li><a href="#">Ganti Warehouse</a></li>
+	    <li><a href="#">Logout</a></li>
+	    <li role="separator" className="divider"></li>
+	    <li><a href="#">Separated link</a></li>
+	  </ul>
+	</div>;
+
+var Header =
+		<h1>Stockopname</h1>;
+var UpdateButton =
+	<div className="btn-group">
+		<button className="btn btn-default" type="button">Perbaharui Data</button>
 	</div>;
 
 var DropdownDataPerPage = 
-	<div className="dropdown">
-	  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	    Dropdown button
+	<div className="btn-group">
+	  <button type="button" className="btn btn-default">10</button>
+	  <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    <span className="caret"></span>
+	    <span className="sr-only">Toggle Dropdown</span>
 	  </button>
-	  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-	    <a className="dropdown-item" href="#">10</a>
-	    <a className="dropdown-item" href="#">25</a>
-	    <a className="dropdown-item" href="#">50</a>
-	    <a className="dropdown-item" href="#">100</a>
-	  </div>
-    </div>;
+	  <ul className="dropdown-menu">
+	    <li><a href="#">10</a></li>
+	    <li><a href="#">25</a></li>
+	    <li><a href="#">50</a></li>
+	    <li><a href="#">100</a></li>
+	    <li role="separator" className="divider"></li>
+	    <li><a href="#">Separated link</a></li>
+	  </ul>
+	</div>;
 
 var DatePicker = 
-	<div className="form-group row">
-	  <label for="example-datetime-local-input" class="col-2 col-form-label">Date and time</label>
-	  <div className="col-10">
-	    <input className="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input"/>
-	  </div>
-	</div>;
+<div>
+		<label for="new-url" class="col-sm-2 control-label inline">End Date</label>
+		<div class="col-sm-4">
+			<p className="input-group inline">
+			    <input className="form-control inline" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input"/>
+			</p>
+		</div></div>;
+
+var DatePickerLabel =
+	<span><b>Date</b></span>;
+var DataPerPageLabel =
+	<span><b>Data Perhalaman</b></span>;
 
 var StockopnameTable = 
 	<div>
 		<table className="table">
 			<thead>
 				<tr>
+					<th></th>
 					<th>Stock Opname No.</th>
 					<th>Counter</th>
 					<th>Status</th>
@@ -64,6 +80,13 @@ var StockopnameTable =
 			</thead>
 			<tbody>
 				<tr>
+					<td>
+						<div class="input-group">
+					      <span class="input-group-addon">
+					        <input type="checkbox" aria-label="..."/>
+					      </span>
+					    </div>
+					</td>
 					<td>STO/WAB-000012/XI-2016/0005</td>
 					<td> - </td>
 					<td>Open</td>
@@ -78,10 +101,14 @@ var StockopnameTable =
 
 	var Pagination = 
 		<nav aria-label="...">
-		  <ul class="pagination">
-		    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-		    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-		    ...
+		  <ul className="pagination">
+		    <li className="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+		    <li className="active"><a href="#">1 <span className="sr-only">(current)</span></a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
 		  </ul>
 		</nav>;
 
@@ -91,18 +118,32 @@ var StockopnameTable =
 		</div>;
 
 	var AssignmentButton = 
-		<button>Assign Stock Opname</button>;
+		<div className="btn-group">
+			<button className="btn btn-default" type="button">Assign Stock Opname</button>
+		</div>;
 
 	var AdminStockopnamePage =
 		<div>
-			<div>
-				{BreadChrumb}
+			<div className="row">
+				<div className="col-sm-9">{BreadChrumb}</div>
+				<div className="col-sm-3">{DropdownProfile}</div>
 			</div>
-			{Header}{DropdownProfile}
-			{UpdateButton}{DatePicker}{DropdownDataPerPage}
+			{Header}
+			<div className="row">
+				<div className="col-sm-6">{UpdateButton}</div>
+				<div className="col-sm-1">{DatePickerLabel}</div>
+				<div className="col-sm-2">{DatePicker}</div>
+				<div className="col-sm-2">{DataPerPageLabel}</div>
+				<div className="col-sm-1">{DropdownDataPerPage}</div>
+			</div>
+
 			{StockopnameTable}
-			{Pagination}
-			{AssignmentNote}{AssignmentButton}
+			<div clasName="right-side">{Pagination}</div>
+			<div className="row">
+				<div className="col-sm-10 right-side">{AssignmentNote}</div>
+				<div className="col-sm-2 right-side">{AssignmentButton}</div>
+			</div>
+			
 		</div>;
 
 ReactDOM.render(

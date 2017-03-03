@@ -1,0 +1,14 @@
+body {
+  font-family: sans-serif;
+}
+#root{
+	margin:0px 50px;
+}
+
+.inline{
+	vertical-align:middle;
+}
+
+.right-side{
+	text-align: right;
+}
