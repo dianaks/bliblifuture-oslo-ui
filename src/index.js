@@ -12,16 +12,12 @@ var BreadChrumb =
 
 var DropdownProfile = 
 	<div className="btn-group">
-	  <button type="button" className="btn btn-default">hadisetiawan</button>
 	  <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	    <span className="caret"></span>
-	    <span className="sr-only">Toggle Dropdown</span>
+	    hadisetyawan <span className="caret"></span>
 	  </button>
 	  <ul className="dropdown-menu">
 	    <li><a href="#">Ganti Warehouse</a></li>
 	    <li><a href="#">Logout</a></li>
-	    <li role="separator" className="divider"></li>
-	    <li><a href="#">Separated link</a></li>
 	  </ul>
 	</div>;
 
@@ -34,20 +30,16 @@ var UpdateButton =
 
 var DropdownDataPerPage = 
 	<div className="btn-group">
-	  <button type="button" className="btn btn-default">10</button>
 	  <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	    <span className="caret"></span>
-	    <span className="sr-only">Toggle Dropdown</span>
+	    10 <span className="caret"></span>
 	  </button>
 	  <ul className="dropdown-menu">
 	    <li><a href="#">10</a></li>
 	    <li><a href="#">25</a></li>
 	    <li><a href="#">50</a></li>
 	    <li><a href="#">100</a></li>
-	    <li role="separator" className="divider"></li>
-	    <li><a href="#">Separated link</a></li>
 	  </ul>
-	</div>;
+	</div>;	
 
 var DatePicker = 
 	<div>
@@ -95,17 +87,13 @@ var StockopnameTable =
 					</td>
 					<td>
 						<div className="btn-group">
-						  <button type="button" className="btn btn-default">Semua</button>
 						  <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    <span className="caret"></span>
-						    <span className="sr-only">Toggle Dropdown</span>
+						    Semua <span className="caret"></span>
 						  </button>
 						  <ul className="dropdown-menu">
 						    <li><a href="#">Open</a></li>
 						    <li><a href="#">Assigned</a></li>
-						    <li><a href="#">In Porgress</a></li>
-						    <li role="separator" className="divider"></li>
-						    <li><a href="#">Separated link</a></li>
+						    <li><a href="#">In Progress</a></li>
 						  </ul>
 						</div>
 					</td>
@@ -175,7 +163,7 @@ var StockopnameTable =
 			</div>
 
 			{StockopnameTable}
-			<div clasName="right-side">{Pagination}</div>
+			<div className="right-side">{Pagination}</div>
 			<div className="row">
 				<div className="col-sm-10 right-side vertical-middle-text">{AssignmentNote}</div>
 				<div className="col-sm-2 right-side">{AssignmentButton}</div>
