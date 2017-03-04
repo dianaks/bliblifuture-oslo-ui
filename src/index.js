@@ -50,16 +50,18 @@ var DropdownDataPerPage =
 	</div>;
 
 var DatePicker = 
-<div>
-		<label for="new-url" class="col-sm-2 control-label inline">End Date</label>
-		<div class="col-sm-4">
-			<p className="input-group inline">
-			    <input className="form-control inline" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input"/>
-			</p>
-		</div></div>;
+	<div>
+	    <p className="input-group">
+	       <input type="text" className="form-control" datetime-picker="dd-MM-yyyy hh:mm" ng-model="dates.startdate" is-open="open.date" enable-time="false" />
+	      <span className="input-group-btn">
+	          <button type="button" className="btn btn-default"><i className="glyphicon glyphicon-calendar"></i></button>
+	      </span>
+	  </p>
+	  <p className="bg-warning" ng-bind="dates.startdate | date:'EEEE, dd-MM-yyyy hh:mm'"></p>
+	</div>;
 
 var DatePickerLabel =
-	<span><b>Date</b></span>;
+	<span><b>Tanggal Pembuatan</b></span>;
 var DataPerPageLabel =
 	<span><b>Data Perhalaman</b></span>;
 
@@ -80,9 +82,42 @@ var StockopnameTable =
 			</thead>
 			<tbody>
 				<tr>
+					<td></td>
 					<td>
-						<div class="input-group">
-					      <span class="input-group-addon">
+						<div className="input-group">
+					      <input type="text" className="form-control" placeholder="Cari Storage Code"/>
+					    </div>
+					</td>
+					<td>
+						<div className="input-group">
+					      <input type="text" className="form-control" placeholder="Cari Counter"/>
+					    </div>
+					</td>
+					<td>
+						<div className="btn-group">
+						  <button type="button" className="btn btn-default">Semua</button>
+						  <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    <span className="caret"></span>
+						    <span className="sr-only">Toggle Dropdown</span>
+						  </button>
+						  <ul className="dropdown-menu">
+						    <li><a href="#">Open</a></li>
+						    <li><a href="#">Assigned</a></li>
+						    <li><a href="#">In Porgress</a></li>
+						    <li role="separator" className="divider"></li>
+						    <li><a href="#">Separated link</a></li>
+						  </ul>
+						</div>
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<div className="input-group">
+					      <span className="input-group-addon">
 					        <input type="checkbox" aria-label="..."/>
 					      </span>
 					    </div>
@@ -100,14 +135,16 @@ var StockopnameTable =
 	</div>;
 
 	var Pagination = 
-		<nav aria-label="...">
+		<nav aria-label="..." className="right-side">
 		  <ul className="pagination">
 		    <li className="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+		    <li><a href="#">First</a></li>
 		    <li className="active"><a href="#">1 <span className="sr-only">(current)</span></a></li>
 		    <li><a href="#">2</a></li>
 		    <li><a href="#">3</a></li>
 		    <li><a href="#">4</a></li>
 		    <li><a href="#">5</a></li>
+		    <li><a href="#">Last</a></li>
 		    <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
 		  </ul>
 		</nav>;
@@ -119,28 +156,28 @@ var StockopnameTable =
 
 	var AssignmentButton = 
 		<div className="btn-group">
-			<button className="btn btn-default" type="button">Assign Stock Opname</button>
+			<a className="btn btn-default" type="button" href="#">Assign Stock Opname</a>
 		</div>;
 
 	var AdminStockopnamePage =
 		<div>
 			<div className="row">
-				<div className="col-sm-9">{BreadChrumb}</div>
-				<div className="col-sm-3">{DropdownProfile}</div>
+				<div className="col-sm-10">{BreadChrumb}</div>
+				<div className="col-sm-2 right-side">{DropdownProfile}</div>
 			</div>
 			{Header}
-			<div className="row">
-				<div className="col-sm-6">{UpdateButton}</div>
-				<div className="col-sm-1">{DatePickerLabel}</div>
-				<div className="col-sm-2">{DatePicker}</div>
-				<div className="col-sm-2">{DataPerPageLabel}</div>
-				<div className="col-sm-1">{DropdownDataPerPage}</div>
+			<div className="row btn-line">
+				<div className="col-sm-5">{UpdateButton}</div>
+				<div className="col-sm-2 vertical-middle-text right-side">{DatePickerLabel}</div>
+				<div className="col-sm-2 clean-padding">{DatePicker}</div>
+				<div className="col-sm-2 vertical-middle-text right-side">{DataPerPageLabel}</div>
+				<div className="col-sm-1 clean-padding">{DropdownDataPerPage}</div>
 			</div>
 
 			{StockopnameTable}
 			<div clasName="right-side">{Pagination}</div>
 			<div className="row">
-				<div className="col-sm-10 right-side">{AssignmentNote}</div>
+				<div className="col-sm-10 right-side vertical-middle-text">{AssignmentNote}</div>
 				<div className="col-sm-2 right-side">{AssignmentButton}</div>
 			</div>
 			
