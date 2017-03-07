@@ -21,7 +21,9 @@ var AdminStockopnamePage =
 			<PageTitle/>
 			<div className="row btn-line">
 				<div className="col-sm-5"><ButtonUpdate/></div>
-				<DatePicker/><DropdownDataPerPage/>
+				<DatePicker/>
+				<div className="col-sm-2 right-side vertical-middle-text"><b>Data Perhalaman</b></div>
+				<div className="col-sm-1 right-side"><DropdownDataPerPage/></div>
 			</div>
 			<StockopnameTable/>
 			<div className="right-side"><Pagination/></div>
