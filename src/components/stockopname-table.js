@@ -1,5 +1,7 @@
 import React from 'react';
 
+import GetStockopnameData from './get-stockopname-data.js'
+
 export default class StockopnameTable extends React.Component {
   render() {
     return <div>
@@ -15,10 +17,15 @@ export default class StockopnameTable extends React.Component {
 						<th>SKU</th>
 						<th></th>
 					</tr>
-				</thead>
-				<tbody>
+				
 					<tr>
-						<td></td>
+						<td>
+							<div className="input-group">
+						      <span className="input-group-addon">
+						        <input type="checkbox" aria-label="..."/>
+						      </span>
+						    </div>
+						</td>
 						<td>
 							<div className="input-group">
 						      <input type="text" className="form-control" placeholder="Cari Storage Code"/>
@@ -46,23 +53,8 @@ export default class StockopnameTable extends React.Component {
 						<td></td>
 						<td></td>
 					</tr>
-					<tr>
-						<td>
-							<div className="input-group">
-						      <span className="input-group-addon">
-						        <input type="checkbox" aria-label="..."/>
-						      </span>
-						    </div>
-						</td>
-						<td>STO/WAB-000012/XI-2016/0005</td>
-						<td> - </td>
-						<td>Open</td>
-						<td>11/06/2016</td>
-						<td>100</td>
-						<td>11</td>
-						<td>Detail{this.props.name}</td>
-					</tr>
-				</tbody>
+				</thead>
+				<GetStockopnameData/>
 			</table>
 		</div>;
   }

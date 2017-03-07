@@ -1,0 +1,47 @@
+{
+    "success": "True",
+    "errorMessage": "",
+    "stockopname": [{ 
+          "Id": "STO/WAB-0000012/XI-2016/0005",
+          "counter": "-",
+          "status": "Open",
+          "createdTime": "11/06/2016",
+          "totalSKU": "11",
+          "totalQty":"100"
+     },{
+          "Id": "STO/WAB-0000012/XI-2016/0007",
+          "counter": "-",
+          "status": "Open",
+          "createdTime": "11/06/2016",
+          "totalSKU": "11",
+          "totalQty":"100"
+     },{
+          "Id": "STO/WAB-0000012/XI-2016/0008",
+          "counter": "arisyanuar",
+          "status": "Assigned",
+          "createdTime": "11/06/2016",
+          "totalSKU": "11",
+          "totalQty":"100"
+     },{
+          "Id": "STO/WAB-0000012/XI-2016/0009",
+          "counter": "arisyanuar",
+          "status": "In Progress",
+          "createdTime": "11/06/2016",
+          "totalSKU": "11",
+          "totalQty":"100"
+     },{
+          "Id": "STO/WAB-0000012/XI-2016/00010",
+          "counter": "arisyanuar",
+          "status": "Finish Counting",
+          "createdTime": "11/06/2016",
+          "totalSKU": "11",
+          "totalQty":"100"
+     },{
+          "Id": "STO/WAB-0000012/XI-2016/00011",
+          "counter": "arisyanuar",
+          "status": "Finish Counting",
+          "createdTime": "11/06/2016",
+          "totalSKU": "11",
+          "totalQty":"100"
+     }]
+}

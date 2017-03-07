@@ -11,6 +11,7 @@ import ButtonUpdate from './components/button-update.js'
 import Assignment from './components/assignment.js'
 import StockopnameTable from './components/stockopname-table.js';
 
+
 var AdminStockopnamePage =
 		<div>
 			<div className="row">
